@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import CartList from "./CartList";
 import CartSummary from "./CartSummary";
 import EmptyCart from "./EmptyCart";

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 const HeaderLogo = () => {
   return (
@@ -12,4 +13,6 @@ const HeaderLogo = () => {
   );
 };
 
-export default HeaderLogo;
+const MempHeaderLogo = React.memo(HeaderLogo);
+
+export default MempHeaderLogo;

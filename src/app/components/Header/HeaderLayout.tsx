@@ -7,9 +7,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const HeaderLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-lg shadow-amber-900/20">
-      <div className="container mx-auto flex justify-between items-center py-4 px-4 lg:px-8">
+      <div className="container  flex justify-between items-center py-4 px-4 lg:px-8">
         <HeaderLogo />
 
         <nav className="hidden md:block">
@@ -31,10 +32,10 @@ const HeaderLayout = () => {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white border-t shadow-inner">
+        <div className="md:hidden bg-white border-t shadow-inner ">
           <nav className="flex flex-col items-center py-6 gap-6 text-lg font-medium">
-            <HeaderLinks mobile />
-            <HeaderIcons mobile />
+            <HeaderLinks mobile setMenuOpen={setMenuOpen} />
+            <HeaderIcons mobile setMenuOpen={setMenuOpen} />
           </nav>
         </div>
       )}

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import ProductSrcMemo from "./ProductSrc";
-import React from "react";
 
 type MainImageProps = {
   mainImage: string;

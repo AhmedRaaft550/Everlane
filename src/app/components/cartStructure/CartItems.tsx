@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import Image from "next/image";
 import { IoIosRemoveCircle } from "react-icons/io";
 import { ProductDetails } from "@/app/types/app";

@@ -1,4 +1,3 @@
-import React from "react";
 import { getWomanProducts } from "@/app/apiServer";
 import { ParamProps } from "@/app/types/app";
 import ProductDetailsContainer from "@/app/components/ProductDetails/ProductDetailsContainer";

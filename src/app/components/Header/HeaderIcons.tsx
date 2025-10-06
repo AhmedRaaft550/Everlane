@@ -2,8 +2,15 @@
 import Link from "next/link";
 import { UseReduxFunctions } from "@/app/utils/hooks/useReduxFunctions";
 import { FaUser, FaSearch, FaCartArrowDown } from "react-icons/fa";
+import React from "react";
 
-const HeaderIcons = ({ mobile = false }: { mobile?: boolean }) => {
+const HeaderIcons = ({
+  mobile = false,
+  setMenuOpen,
+}: {
+  mobile?: boolean;
+  setMenuOpen?: (value: boolean) => void;
+}) => {
   const { data } = UseReduxFunctions();
   const cartLength = data.length;
 
@@ -11,7 +18,10 @@ const HeaderIcons = ({ mobile = false }: { mobile?: boolean }) => {
     "relative cursor-pointer hover:text-amber-700 transition-colors text-xl";
 
   return (
-    <div className={`flex ${mobile ? "gap-6" : "gap-4"} text-amber-900`}>
+    <div
+      className={`flex ${mobile ? "gap-6" : "gap-4"} text-amber-900`}
+      onClick={() => setMenuOpen?.(false)}
+    >
       <Link href="/auth/signin" aria-label="Account" className={iconStyles}>
         <FaUser />
       </Link>
@@ -32,4 +42,6 @@ const HeaderIcons = ({ mobile = false }: { mobile?: boolean }) => {
   );
 };
 
-export default HeaderIcons;
+const HeaderIconsMemo = React.memo(HeaderIcons);
+
+export default HeaderIconsMemo;

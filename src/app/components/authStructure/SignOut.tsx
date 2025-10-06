@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { signOut } from "next-auth/react";
 import { IoLogOutOutline } from "react-icons/io5";
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 const links = [
   { name: "Women", path: "/women" },
@@ -7,7 +8,13 @@ const links = [
   { name: "Support", path: "/support" },
 ];
 
-const HeaderLinks = ({ mobile = false }: { mobile?: boolean }) => {
+const HeaderLinks = ({
+  mobile = false,
+  setMenuOpen,
+}: {
+  mobile?: boolean;
+  setMenuOpen?: (value: boolean) => void;
+}) => {
   return (
     <ul
       className={`flex ${
@@ -17,8 +24,10 @@ const HeaderLinks = ({ mobile = false }: { mobile?: boolean }) => {
       {links.map((link) => (
         <li key={link.name}>
           <Link
+            prefetch={mobile ? false : true}
             href={link.path}
             className="hover:text-amber-700 transition-colors text-lg"
+            onClick={() => setMenuOpen?.(false)}
           >
             {link.name}
           </Link>
@@ -28,4 +37,6 @@ const HeaderLinks = ({ mobile = false }: { mobile?: boolean }) => {
   );
 };
 
-export default HeaderLinks;
+const HeaderLinksMemo = React.memo(HeaderLinks);
+
+export default HeaderLinksMemo;

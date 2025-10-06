@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import ReduxProvider from "./redux/ReduxProvider";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
+import FloatingCart from "./components/cartStructure/FloatingCartMobileView";
 
 export const metadata: Metadata = {
   title: "Everlane",
@@ -46,6 +47,7 @@ export default function RootLayout({
         <BeforeHeader />
         <ReduxProvider>
           <HeaderLayout />
+          <FloatingCart />
           <main className="flex-1"> {children}</main>
         </ReduxProvider>
         <Footer />
