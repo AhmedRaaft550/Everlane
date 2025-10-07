@@ -26,7 +26,7 @@ const Checkout = async ({
   return (
     <section className="py-12 px-4 h-full bg-gray-50">
       <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-xl p-8 border border-amber-900 hover:scale-102 duration-200">
-        <h1 className="text-center text-4xl font-extrabold text-amber-900 tracking-wide mb-8 uppercase">
+        <h1 className="text-center font-mono text-4xl font-extrabold text-amber-900 tracking-wide mb-8 uppercase">
           Checkout
         </h1>
         <OrderSummary
