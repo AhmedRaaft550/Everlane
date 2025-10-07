@@ -1,5 +1,7 @@
 import OrderSummary from "@components/checkoutStructure/OrderSummary";
 import PaymentButtons from "@components/checkoutStructure/PaymentButtons";
+import { redirect } from "next/navigation";
+
 import Link from "next/link";
 
 type SearchParams = {
@@ -16,6 +18,10 @@ const Checkout = async ({
   const priceToNumber = Number(price);
   const discount = 100;
   const originalTotal = priceToNumber + discount;
+
+  if (!price || !items) {
+    redirect("/");
+  }
 
   return (
     <section className="py-12 px-4 h-full bg-gray-50">

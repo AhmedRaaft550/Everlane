@@ -5,9 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 const SigninWithGoogleButton = () => {
   return (
     <button
-      onClick={() =>
-        signIn("google", { redirect: true, callbackUrl: "/auth/signin" })
-      }
+      onClick={() => signIn("google", { redirect: false })}
       className="w-full flex cursor-pointer items-center justify-center gap-2 bg-white text-gray-700 font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition duration-300"
     >
       <FcGoogle className="text-xl" />
