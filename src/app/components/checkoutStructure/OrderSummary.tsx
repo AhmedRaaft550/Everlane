@@ -4,7 +4,6 @@ import Link from "next/link";
 const OrderSummary = () => {
   return (
     <>
-      {/* Price AND Order Summary */}
       <div>
         <h1 className="text-2xl font-semibold mb-2 font-mono">checkout</h1>
         <Link
@@ -15,7 +14,6 @@ const OrderSummary = () => {
         </Link>
       </div>
 
-      {/* Payment Methods */}
       <div className="flex items-center justify-center gap-3 border-t pt-4">
         <p className="text-gray-700 font-medium">Pay with</p>
         <div className="flex text-3xl text-amber-900 gap-2">
@@ -23,7 +21,7 @@ const OrderSummary = () => {
           <FaCcMastercard />
         </div>
       </div>
-      {/* card inputs */}
+
       <form action="">
         <div className="flex flex-col gap-3 text-left mt-4">
           <label className="text-sm font-medium text-gray-700">

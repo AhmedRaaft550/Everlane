@@ -58,3 +58,13 @@ export interface CartSummaryProps {
   totalItems: number;
   totalPrice: string;
 }
+
+export type MainImageProps = {
+  mainImage: string;
+  images: string[];
+};
+
+export type ProductSrcProps = {
+  images: string[];
+  setImage: (image: string) => void;
+};

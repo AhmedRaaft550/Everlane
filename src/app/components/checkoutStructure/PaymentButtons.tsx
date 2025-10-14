@@ -8,7 +8,6 @@ const PaymentButtons = () => {
         Pay Now
       </button>
 
-      {/* Apple Pay Button */}
       <button
         className=" w-full flex items-center justify-center gap-1 bg-black hover:bg-[#262424]  text-white py-3 rounded-xl font-semibold transition duration-200 shadow-md active:scale-95"
         aria-label="Pay with Apple Pay"

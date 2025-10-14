@@ -1,7 +1,6 @@
 const NotFound = () => {
   return (
     <section className="relative w-full h-full overflow-hidden bg-black">
-      {/* Video Background */}
       <video
         src="/videos/notFound.mp4"
         autoPlay
