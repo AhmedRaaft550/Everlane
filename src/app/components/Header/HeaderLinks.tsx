@@ -21,12 +21,14 @@ const HeaderLinks = ({
         mobile ? "flex-col gap-6" : "gap-8"
       } items-center text-black font-semibold`}
     >
-      {links.map((link) => (
+      {links.map((link, index) => (
         <li key={link.name}>
           <Link
             prefetch={mobile ? false : true}
             href={link.path}
-            className="hover:text-amber-700 transition-colors text-lg"
+            className={`text-lg transition-colors hover:text-amber-700  ${
+              index === 0 ? "text-amber-700 " : "text-black"
+            }`}
             onClick={() => setMenuOpen?.(false)}
           >
             {link.name}
